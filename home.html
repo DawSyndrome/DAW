@@ -1,88 +1,117 @@
 <!DOCTYPE html>
 <html>
-<head>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+			.navbar_ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+				background-color: #333;
+			}
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+			.navbar_li {
+				float: left;
+			}
+			.right{
+				float: right;
+			}
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="home.css">
+			.navbar_li a {
+				display: block;
+				color: white;
+				text-align: center;
+				padding: 14px 16px;
+				text-decoration: none;
+			}
 
-</head>
-<body>
+			.navbar_li a:hover {
+				background-color: #111;
+			}
 
+			.active {
+				background-color: #4CAF50;
+			}
 
-
-
-<nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span> 
-        </button>
-        <a class="navbar-brand" href="home.html">MatixForum</a>
-      </div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav">
-          <li class="active">   <a href="home.html">Home</a>    </li>
-          <!--<li>          <a href="#">Page 1</a>    </li>
-          <li>          <a href="#">Page 2</a>    </li> 
-          <li>          <a href="#">Page 3</a>    </li> -->
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li>      <a href="register.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a>    </li>
-          <li>      <a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a>    </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+			/*////////////////////////////////////////////////////////*/
 
 
+			.blog{
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+				background-color: #dbffdd;
 
+				margin-top: 10px;
+			}
 
+			.bloggo{
+				background-color: #224724;
+				color: white;
+				margin: 10px;
+			}
 
+			.bloggo_info{
+				padding: 5px;
 
-<div class="row">
-  <div class="leftcolumn">
-    <div class="card">
-      <h2>Road Rage</h2>
-      <h5>I'm sorry if you see my face  <div class="post-date">Dec 7, 2017</div></h5>
-      <img class="post-image" src="https://mcdn.wallpapersafari.com/medium/16/93/pzcw2B.jpg">
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-    </div>
-    <div class="card">
-      <h2>Yeet</h2>
-      <h5>Epah ya eu já comia  <div class="post-date">Sep 2, 2017</div></h5>
-      <img class="post-image" src="https://p.bigstockphoto.com/GeFvQkBbSLaMdpKXF1Zv_bigstock-Aerial-View-Of-Blue-Lakes-And--227291596.jpg">
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-    </div>
-  </div>
-  <div class="rightcolumn">
-    <div class="card">
-      <h2>About MatrixForum</h2>
-      <img class="post-image rightcol-image" src="https://i.pinimg.com/originals/01/61/fb/0161fb2fde82513ff9b0510b930ff578.jpg">
-      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-    </div>
-    <div class="card">
-      <h3>Popular Posts</h3>
-      <!--<div class="fakeimg">Image</div><br>
-      <div class="fakeimg">Image</div><br>
-      <div class="fakeimg">Image</div>-->
-      not much to show here yet
-    </div>
-  </div>
-</div>
+			}
+			.bloggo_data{
+				padding-left: 10px;
+				padding-bottom: 10px;
+			}
 
-<div class="footer">
-  <h2>Footer</h2>
-</div>
+			body{
+				height: 100%;
+			}
 
-</body>
+			.footer{
+				box-sizing: border-box;
+				position: fixed;
+				width: 100%;
+				left: 0;
+				bottom: 0;
+			}
+			.footer_left{
+				box-sizing: border-box;
+				margin: 10px;
+				float: left;
+				display: inline-block;
+			}
+			.footer_right{
+				box-sizing: border-box;
+				margin: 10px;
+				float: right;
+				display: inline-block;
+			}
+
+		</style>
+	</head>
+	<body>
+		<ul class="navbar_ul">
+			<li class="navbar_li"><a class="active" href="">Home</a></li>
+			<li class="navbar_li right"><a href="register.html">Register</a></li>
+			<li class="navbar_li right"><a href="login.html">Login</a></li>
+		</ul>
+
+		<ul class="blog">
+			<li class="bloggo">
+				<div class="bloggo_info">Matwix  -  Date Created: 1st January 1970  -  Date Updated: never updated</div>
+				<hr>
+				<div class="bloggo_data">realmente há sempre coisas a criticar em relação a tudo, mais vale um gajo deixar-se tar calado</div>
+			</li>
+
+			<li class="bloggo">
+				<div class="bloggo_info">lemme see dat  -  Date Created: 31st April 1969  -  Date Updated: never updated</div>
+				<hr>
+				<div class="bloggo_data">spivot text test : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam gravida augue in sapien dignissim, in mattis diam consectetur. Nam eget consequat ipsum. Nulla ipsum nisi, luctus nec tempus in, convallis ultricies arcu. Fusce ac turpis pulvinar, dignissim neque id, lacinia erat. Donec pharetra velit...</div>
+			</li>
+		</ul>
+
+		<div class="footer">
+			<div class="footer_left">Daw 2019-2020</div>
+			<div class="footer_right">Por Guilherme Dias</div>
+		</div>
+	</body>
 </html>
