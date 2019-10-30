@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-10-30 11:42:33
+/* Smarty version 3.1.33, created on 2019-10-30 12:28:05
   from 'C:\Users\TrisT\Documents\Cadeiras\DAW\daw\templates\index_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5db969192fdde8_46624075',
+  'unifunc' => 'content_5db973c58a7505_25186081',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'aaf307dbf2286941a86ef62834f065d017a48868' => 
     array (
       0 => 'C:\\Users\\TrisT\\Documents\\Cadeiras\\DAW\\daw\\templates\\index_template.tpl',
-      1 => 1572390329,
+      1 => 1572434883,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5db969192fdde8_46624075 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5db973c58a7505_25186081 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 <head>
@@ -52,26 +52,34 @@ function content_5db969192fdde8_46624075 (Smarty_Internal_Template $_smarty_tpl)
 		    	<span class="icon-bar"></span>
 		    	<span class="icon-bar"></span> 
 	    	</button>
-			<a class="navbar-brand" href="home.html">MatixForum</a>
+			<a class="navbar-brand" href="<?php echo $_smarty_tpl->tpl_vars['welcome']->value['url'];?>
+"><?php echo $_smarty_tpl->tpl_vars['welcome']->value['name'];?>
+</a>
 		</div>
 		<div class="collapse navbar-collapse" id="myNavbar">
 			<ul class="nav navbar-nav">
-				<li class="active">   <a href="home.html">Home</a>    </li>
+				<li class="active">   <a href="<?php echo $_smarty_tpl->tpl_vars['menu_1']->value['url'];?>
+"><?php echo $_smarty_tpl->tpl_vars['menu_1']->value['name'];?>
+</a>    </li>
 				<!--<li>          <a href="#">Page 1</a>    </li>
 				<li>          <a href="#">Page 2</a>    </li> 
 				<li>          <a href="#">Page 3</a>    </li> -->
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li>
-					<a href="register.html">
+					<a href="<?php echo $_smarty_tpl->tpl_vars['menu_2']->value['url'];?>
+">
 						<span class="glyphicon glyphicon-user">
-						</span> Sign Up
+						</span> <?php echo $_smarty_tpl->tpl_vars['menu_2']->value['name'];?>
+
 					</a>    
 				</li>
 				<li>
-					<a href="login.html">
+					<a href="<?php echo $_smarty_tpl->tpl_vars['menu_3']->value['url'];?>
+">
 						<span class="glyphicon glyphicon-log-in">
-						</span> Login
+						</span> <?php echo $_smarty_tpl->tpl_vars['menu_3']->value['name'];?>
+
 					</a>
 				</li>
 			</ul>

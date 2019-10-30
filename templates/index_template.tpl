@@ -25,26 +25,26 @@
 		    	<span class="icon-bar"></span>
 		    	<span class="icon-bar"></span> 
 	    	</button>
-			<a class="navbar-brand" href="home.html">MatixForum</a>
+			<a class="navbar-brand" href="{$welcome.url}">{$welcome.name}</a>
 		</div>
 		<div class="collapse navbar-collapse" id="myNavbar">
 			<ul class="nav navbar-nav">
-				<li class="active">   <a href="home.html">Home</a>    </li>
+				<li class="active">   <a href="{$menu_1.url}">{$menu_1.name}</a>    </li>
 				<!--<li>          <a href="#">Page 1</a>    </li>
 				<li>          <a href="#">Page 2</a>    </li> 
 				<li>          <a href="#">Page 3</a>    </li> -->
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li>
-					<a href="register.html">
+					<a href="{$menu_2.url}">
 						<span class="glyphicon glyphicon-user">
-						</span> Sign Up
+						</span> {$menu_2.name}
 					</a>    
 				</li>
 				<li>
-					<a href="login.html">
+					<a href="{$menu_3.url}">
 						<span class="glyphicon glyphicon-log-in">
-						</span> Login
+						</span> {$menu_3.name}
 					</a>
 				</li>
 			</ul>
