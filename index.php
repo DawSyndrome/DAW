@@ -56,7 +56,7 @@
 	$smarty->assign('welcome', ["url" => "/", "name" => "MatrixForum"]);
 	$smarty->assign('menu_1', ["url" => "/", "name" => "Home"]);
 	$smarty->assign('menu_2', ["url" => "login.html", "name" => "Log In"]);
-	$smarty->assign('menu_3', ["url" => "register.html", "name" => "Register"]);
+	$smarty->assign('menu_3', ["url" => "register.php", "name" => "Register"]);
 
 	$smarty->display('index_template.tpl');
 ?>
