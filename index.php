@@ -4,7 +4,7 @@
 	///require('/usr/share/php/smarty/libs/Smarty.class.php');
 	
 
-    include "db.php";
+	include "db.php";
 
 	$kuweri = $conn->query("
 		SELECT author, admin, activated, content, created_at, updated_at FROM 
@@ -47,16 +47,16 @@
 	require('smarti/Smarty.class.php');
 
 	$smarty = new Smarty();
-    $smarty->template_dir = 'templates';
-    $smarty->compile_dir = 'templates_c';
-    $smarty->cache_dir = 'cache';
-    $smarty->config_dir = 'configs';
+	$smarty->template_dir = 'templates';
+	$smarty->compile_dir = 'templates_c';
+	$smarty->cache_dir = 'cache';
+	$smarty->config_dir = 'configs';
 
-    $smarty->assign('posts', $obj);
-    $smarty->assign('welcome', ["url" => "/", "name" => "MatrixForum"]);
-    $smarty->assign('menu_1', ["url" => "/", "name" => "Home"]);
-    $smarty->assign('menu_2', ["url" => "login.html", "name" => "Log In"]);
-    $smarty->assign('menu_3', ["url" => "register.html", "name" => "Register"]);
+	$smarty->assign('posts', $obj);
+	$smarty->assign('welcome', ["url" => "/", "name" => "MatrixForum"]);
+	$smarty->assign('menu_1', ["url" => "/", "name" => "Home"]);
+	$smarty->assign('menu_2', ["url" => "login.html", "name" => "Log In"]);
+	$smarty->assign('menu_3', ["url" => "register.html", "name" => "Register"]);
 
-    $smarty->display('index_template.tpl');
+	$smarty->display('index_template.tpl');
 ?>
