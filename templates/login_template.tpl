@@ -13,6 +13,7 @@
 
 </head>
 <body>
+
 	<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -54,22 +55,19 @@
 		</div>
 	{else}
 		<div class="container">
-			<h2>Register</h2>
-			<form action="register.php" method="post">
+			<h2>Login</h2>
+			<form action="login.php" method="post">
 				<div class="form-group">
-					<label for="email">Name:</label>
-					<input type="text" class="form-control" id="email" placeholder="Enter name" name="name" {if isset($input.name)}value="{$input.name}"{/if}>
-				</div>
-				<div class="form-group">
-					<label for="email">Email:</label>
-					<input type="email" class="form-control" id="email" placeholder="Enter email" name="email" {if isset($input.email)}value="{$input.email}"{/if}>
-				</div>
+						<label for="email">Email:</label>
+						<input type="email" class="form-control" id="email" placeholder="Enter email" name="email" {if isset($input.email)}value="{$input.email}"{/if}>
+					</div>
 				<div class="form-group">
 					<label for="pwd">Password:</label>
 					<input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pass">
-					<input type="password" class="form-control" id="pwd" placeholder="Re-enter password" name="pasc">
 				</div>
-				
+				<div class="checkbox">
+					<label><input type="checkbox" name="remember" {if isset($input.remember)}checked{/if}>Remember me</label>
+				</div>
 				<button type="submit" class="btn btn-default">Submit</button>     <span style="color: red;">{$error.text}</span>
 			</form>
 		</div>

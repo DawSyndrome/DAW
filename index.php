@@ -3,20 +3,22 @@
 	
 	///require('/usr/share/php/smarty/libs/Smarty.class.php');
 	
+	session_start();
 
 	include "db.php";
 
 	$kuweri = $conn->query("
-		SELECT author, admin, activated, content, created_at, updated_at FROM 
-			(SELECT * FROM microposts) posts
+		SELECT id, users.author_id, author, admin, activated, content, created_at, updated_at FROM 
+			(SELECT id, content, created_at, updated_at, user_id AS author_id FROM microposts) posts
 		JOIN
-			(SELECT id, name AS author, admin, activated FROM users) users
+			(SELECT id AS author_id, name AS author, admin, activated FROM users) users
 		ON
-			posts.user_id = users.id
+			posts.author_id = users.author_id
 		ORDER BY 
 			created_at DESC
 		;
 	");
+
 
 	$obj = [];
 	$i = 0;
@@ -53,10 +55,18 @@
 	$smarty->config_dir = 'configs';
 
 	$smarty->assign('posts', $obj);
-	$smarty->assign('welcome', ["url" => "/", "name" => "MatrixForum"]);
+
+	if(isset($_SESSION["userinfo"])){
+		$smarty->assign('user_id', $_SESSION["userinfo"]["id"]);
+		$smarty->assign('welcome', ["url" => "/", "name" => $_SESSION["userinfo"]["name"]]);
+		$smarty->assign('menu_2', ["url" => "logout_action.php", "name" => "Log Out"]);
+		$smarty->assign('menu_3', ["url" => "blog.php", "name" => "Make Post"]);
+	}else{
+		$smarty->assign('welcome', ["url" => "/", "name" => "MatrixForum"]);
+		$smarty->assign('menu_2', ["url" => "login.php", "name" => "Log In"]);
+		$smarty->assign('menu_3', ["url" => "register.php", "name" => "Register"]);
+	}
 	$smarty->assign('menu_1', ["url" => "/", "name" => "Home"]);
-	$smarty->assign('menu_2', ["url" => "login.html", "name" => "Log In"]);
-	$smarty->assign('menu_3', ["url" => "register.php", "name" => "Register"]);
 
 	$smarty->display('index_template.tpl');
 ?>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-10-30 19:01:14
-  from 'C:\Users\TrisT\Documents\Cadeiras\DAW\daw\templates\register_template.tpl' */
+/* Smarty version 3.1.33, created on 2019-10-30 19:02:46
+  from 'C:\Users\TrisT\Documents\Cadeiras\DAW\daw\templates\login_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5db9cfea492c69_15961861',
+  'unifunc' => 'content_5db9d0462efc63_20016043',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '20a2b15e779a9cf3985a328478cb7fa9e6efa03f' => 
+    '2ffa74d2c054ff84b4cd93c16de8c4d2a04f8e84' => 
     array (
-      0 => 'C:\\Users\\TrisT\\Documents\\Cadeiras\\DAW\\daw\\templates\\register_template.tpl',
-      1 => 1572458409,
+      0 => 'C:\\Users\\TrisT\\Documents\\Cadeiras\\DAW\\daw\\templates\\login_template.tpl',
+      1 => 1572458563,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5db9cfea492c69_15961861 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5db9d0462efc63_20016043 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 <head>
@@ -40,6 +40,7 @@ function content_5db9cfea492c69_15961861 (Smarty_Internal_Template $_smarty_tpl)
 
 </head>
 <body>
+
 	<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -90,24 +91,20 @@ function content_5db9cfea492c69_15961861 (Smarty_Internal_Template $_smarty_tpl)
 		</div>
 	<?php } else { ?>
 		<div class="container">
-			<h2>Register</h2>
-			<form action="register.php" method="post">
+			<h2>Login</h2>
+			<form action="login.php" method="post">
 				<div class="form-group">
-					<label for="email">Name:</label>
-					<input type="text" class="form-control" id="email" placeholder="Enter name" name="name" <?php if (isset($_smarty_tpl->tpl_vars['input']->value['name'])) {?>value="<?php echo $_smarty_tpl->tpl_vars['input']->value['name'];?>
+						<label for="email">Email:</label>
+						<input type="email" class="form-control" id="email" placeholder="Enter email" name="email" <?php if (isset($_smarty_tpl->tpl_vars['input']->value['email'])) {?>value="<?php echo $_smarty_tpl->tpl_vars['input']->value['email'];?>
 "<?php }?>>
-				</div>
-				<div class="form-group">
-					<label for="email">Email:</label>
-					<input type="email" class="form-control" id="email" placeholder="Enter email" name="email" <?php if (isset($_smarty_tpl->tpl_vars['input']->value['email'])) {?>value="<?php echo $_smarty_tpl->tpl_vars['input']->value['email'];?>
-"<?php }?>>
-				</div>
+					</div>
 				<div class="form-group">
 					<label for="pwd">Password:</label>
 					<input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pass">
-					<input type="password" class="form-control" id="pwd" placeholder="Re-enter password" name="pasc">
 				</div>
-				
+				<div class="checkbox">
+					<label><input type="checkbox" name="remember" <?php if (isset($_smarty_tpl->tpl_vars['input']->value['remember'])) {?>checked<?php }?>>Remember me</label>
+				</div>
 				<button type="submit" class="btn btn-default">Submit</button>     <span style="color: red;"><?php echo $_smarty_tpl->tpl_vars['error']->value['text'];?>
 </span>
 			</form>
