@@ -36,15 +36,15 @@
 
 	if(isset($_SESSION["userinfo"])){
 		$smarty->assign('user_id', $_SESSION["userinfo"]["id"]);
-		$smarty->assign('welcome', ["url" => "/", "name" => $_SESSION["userinfo"]["name"]]);
+		$smarty->assign('welcome', ["url" => ".", "name" => $_SESSION["userinfo"]["name"]]);
 		$smarty->assign('menu_2', ["url" => "logout_action.php", "name" => "Log Out"]);
 		$smarty->assign('menu_3', ["url" => "blog.php", "name" => "Make Post"]);
 	}else{
-		$smarty->assign('welcome', ["url" => "/", "name" => "MatrixForum"]);
+		$smarty->assign('welcome', ["url" => ".", "name" => "MatrixForum"]);
 		$smarty->assign('menu_2', ["url" => "login.php", "name" => "Log In"]);
 		$smarty->assign('menu_3', ["url" => "register.php", "name" => "Register"]);
 	}
-	$smarty->assign('menu_1', ["url" => "/", "name" => "Home"]);
+	$smarty->assign('menu_1', ["url" => ".", "name" => "Home"]);
 
 	$smarty->display('blog_template.tpl');
 ?>

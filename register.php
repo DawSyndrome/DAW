@@ -57,8 +57,8 @@
 	//$smarty->assign('posts', $obj);
 	$smarty->assign('error', $error);
 	$smarty->assign('input', $_POST);
-	$smarty->assign('welcome', ["url" => "/", "name" => "MatrixForum"]);
-	$smarty->assign('menu_1',  ["url" => "/", "name" => "Home"]);
+	$smarty->assign('welcome', ["url" => ".", "name" => "MatrixForum"]);
+	$smarty->assign('menu_1',  ["url" => ".", "name" => "Home"]);
 	$smarty->assign('menu_2',  ["url" => "login.php", "name" => "Log In"]);
 	$smarty->assign('menu_3',  ["url" => "register.php", "name" => "Register"]);
 

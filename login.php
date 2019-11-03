@@ -48,8 +48,8 @@
 	//$smarty->assign('posts', $obj);
 	$smarty->assign('error', $error);
 	$smarty->assign('input', $_POST);
-	$smarty->assign('welcome', ["url" => "/", "name" => "MatrixForum"]);
-	$smarty->assign('menu_1',  ["url" => "/", "name" => "Home"]);
+	$smarty->assign('welcome', ["url" => ".", "name" => "MatrixForum"]);
+	$smarty->assign('menu_1',  ["url" => ".", "name" => "Home"]);
 	$smarty->assign('menu_2',  ["url" => "login.php", "name" => "Log In"]);
 	$smarty->assign('menu_3',  ["url" => "register.php", "name" => "Register"]);
 
@@ -57,7 +57,7 @@
 	$smarty->display('login_template.tpl');
 
 	if($error["success"]){
-		header("refresh:3;url=/");
+		header("refresh:3;url=.");
 	}
 
 ?>
