@@ -3,11 +3,10 @@
 
 	include "db.php";
 	if(isset($_GET["post_id"])){
-		if(
-			($kuweri = $conn->query("
-				SELECT content FROM microposts WHERE id=".$_GET["post_id"]." AND user_id=".$_SESSION["userinfo"]["id"].";
-			"))->num_rows != 0
-		){
+		$kuweri = $conn->query("
+			SELECT content FROM microposts WHERE id=".$_GET["post_id"]." AND user_id=".$_SESSION["userinfo"]["id"].";
+		");
+		if($kuweri->num_rows != 0){
 			$action = [
 				"name" => "Update Post", 
 				"url"  => "updateblog_action.php?post_id=".$_GET["post_id"], 
