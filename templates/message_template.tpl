@@ -2,8 +2,9 @@
 <html>
 <head>
 	<title>nada</title>
+	<meta http-equiv="Refresh" content="{$redirect.time}; url={$redirect.url}">
 </head>
 <body>
-	Nothin much to c herr
+	<h1 style="color: {$redirect.color};">{$redirect.text}</h1>
 </body>
 </html>

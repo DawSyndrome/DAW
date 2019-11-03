@@ -4,8 +4,16 @@
 	///require('/usr/share/php/smarty/libs/Smarty.class.php');
 	
 	session_start();
-
 	include "db.php";
+
+	if(!isset($_SESSION["userinfo"]) && isset($_COOKIE["RememberMe"])){
+		$kuweri = $conn->query("
+			SELECT id, name, email, admin, activated FROM users WHERE remember_digest='".$_COOKIE["RememberMe"]."';
+		");
+		if($kuweri->num_rows != 0){
+			$_SESSION["userinfo"] = $kuweri->fetch_assoc();
+		}
+	}
 
 	$kuweri = $conn->query("
 		SELECT id, users.author_id, author, admin, activated, content, created_at, updated_at FROM 

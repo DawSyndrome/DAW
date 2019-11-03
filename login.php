@@ -20,6 +20,19 @@
 			$error = ["success" => true, "text" => "Login concluido, redirecionando..."];
 			session_start();
 			$_SESSION["userinfo"] = $kweri->fetch_assoc();
+			$cookie = md5(time());
+			if(isset($_POST["remember"])){
+				setcookie("RememberMe", $cookie, time() + (3600 * 24 * 30));
+				$conn->query("
+					UPDATE 
+						users 
+					SET 
+						remember_digest='".$cookie."' 
+					WHERE
+						id=".$_SESSION["userinfo"]["id"]."
+					;
+				");
+			}
 		}
 	}
 
