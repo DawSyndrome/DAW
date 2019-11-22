@@ -49,31 +49,16 @@
 		</div>
 	</nav>
 
-	{if $error.success}
-		<div class="container">
-			<h2>{$error.text}</h2>
-		</div>
-	{else}
-		<div class="container">
-			<h2>Login</h2>
-			<form action="login.php" method="post">
-				<div class="form-group">
-						<label for="email">Email:</label>
-						<input type="email" class="form-control" id="email" placeholder="Enter email" name="email" {if isset($input.email)}value="{$input.email}"{/if}>
-					</div>
-				<div class="form-group">
-					<label for="pwd">Password:</label>
-					<input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pass">
+	<div class="container">
+		<h2>Forgot password</h2>
+		<form action="password_reset_action.php" method="post">
+			<div class="form-group">
+					<label for="email">Email:</label>
+					<input type="email" class="form-control" id="email" placeholder="Enter email" name="email" {if isset($input.email)}value="{$input.email}"{/if}>
 				</div>
-				<div class="checkbox">
-					<label><input type="checkbox" name="remember" {if isset($input.remember)}checked{/if}>Remember me</label>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="password_reset.php">Forgot password?</a>
-				</div>
-				<button type="submit" class="btn btn-default">Submit</button>     <span style="color: red;">{$error.text}</span>
-			</form>
-		</div>
-	{/if}
+			<button type="submit" class="btn btn-default">Submit</button>     <span style="color: red;">{$error.text}</span>
+		</form>
+	</div>
 
 </body>
 </html>
