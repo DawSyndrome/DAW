@@ -1,0 +1,102 @@
+* {
+	box-sizing: border-box;
+}
+
+/* Add a gray background color with some padding */
+body {
+	font-family: Arial;
+	padding: 20px;
+	background: #f1f1f1;
+}
+
+
+.edit_button{
+	width: 100%; 
+	border: solid purple 2px;
+	text-align: center; 
+	padding-left: 20px; 
+	padding-right: 20px;
+	padding-bottom: 2px;
+	padding-top: 2px;
+	border-radius: 2px;
+	margin-right: 10px;
+	margin-left: 5px;
+}
+
+
+.navbar{
+	margin: 0px;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+	float: left;
+	width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+	float: left;
+	width: 25%;
+	padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+	background-color: #aaa;
+	width: 100%;
+	padding: 20px;
+}
+
+
+.post-image{
+	object-fit: cover;
+	width: 100%;
+	height: 200px;
+}
+.post-image.rightcol-image{
+	max-height: 100px;
+}
+
+.post-date{
+	color: #3a0047;
+	display: inline;
+	background: #c7c1c9;
+	border: 2px solid #c7c1c9;
+	border-radius: 3px;
+}
+
+/* Add a card effect for articles */
+.card {
+	background-color: white;
+	padding: 20px;
+	margin-top: 20px;
+}
+
+/* Set no margins */
+.row{
+	margin: 0px;
+}
+/* Clear floats after the columns */
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* Footer */
+.footer {
+	padding: 20px;
+	text-align: center;
+	background: #ddd;
+	margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+	.leftcolumn, .rightcolumn {   
+		width: 100%;
+		padding: 0;
+	}
+}
