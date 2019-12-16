@@ -1,1 +1,5 @@
-Lab*/
+/storage/framework/views/*
+/storage/framework/sessions/*
+/storage/framework/cache/*
+/.git
+/bootstrap/cache/*
