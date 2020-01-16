@@ -134,4 +134,7 @@ class Shelter extends Controller
 		]);
 	}
 
+	public function adopted(){
+		
+	}
 }

@@ -24,3 +24,4 @@ Route::get ('/register', "Shelter@register") -> name("register");
 Route::post('/register_act', "Shelter@register_act") -> name("register_act");
 Route::get ('/logout', "Shelter@logout") -> name("logout");
 Route::get ('/adopt/{id}', "Shelter@adopt") -> name("adopt");
+Route::get ('/adopted', "Shelter@adopted") -> name("adopted");
